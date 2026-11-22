@@ -5,10 +5,7 @@ push to `main` and pull request targeting `main`. After both checks pass,
 GitHub Actions builds a Docker image. Pushes to `main` also publish that image
 to GitHub Container Registry (GHCR).
 
-![CI/CD workflow](https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/ci-cd.yml/badge.svg)
-
-Replace `<OWNER>/<REPOSITORY>` in the badge URL with your GitHub account or
-organization and repository name after you create the repository.
+![CI/CD workflow](https://github.com/keerthanajeyashree25-eng/github-actions-cicd/actions/workflows/ci-cd.yml/badge.svg)
 
 ## Project structure
 
@@ -137,13 +134,13 @@ git init
 git add .
 git commit -m "Add Flask CI/CD example"
 git branch -M main
-git remote add origin https://github.com/<OWNER>/github-actions-cicd.git
+git remote add origin https://github.com/keerthanajeyashree25-eng/github-actions-cicd.git
 git push -u origin main
 ```
 
-Replace `<OWNER>` with your GitHub username or organization. If Git is already
-initialized, skip `git init`; if `origin` already exists, update it with
-`git remote set-url origin https://github.com/<OWNER>/github-actions-cicd.git`.
+If Git is already initialized, skip `git init`; if `origin` already exists,
+update it with
+`git remote set-url origin https://github.com/keerthanajeyashree25-eng/github-actions-cicd.git`.
 
 ### 2. Allow Actions to publish packages
 
@@ -165,7 +162,7 @@ three jobs, but do not push an image.
 After a successful push to `main`, the image is available as:
 
 ```text
-ghcr.io/<OWNER>/github-actions-cicd:latest
+ghcr.io/keerthanajeyashree25-eng/github-actions-cicd:latest
 ```
 
 The workflow also publishes a tag containing the commit SHA. Find the package
@@ -174,6 +171,6 @@ it, open the package's settings and set its visibility to **Public** if it is
 not already public. Then pull and run it with:
 
 ```bash
-docker pull ghcr.io/<OWNER>/github-actions-cicd:latest
-docker run --rm -p 5000:5000 ghcr.io/<OWNER>/github-actions-cicd:latest
+docker pull ghcr.io/keerthanajeyashree25-eng/github-actions-cicd:latest
+docker run --rm -p 5000:5000 ghcr.io/keerthanajeyashree25-eng/github-actions-cicd:latest
 ```
