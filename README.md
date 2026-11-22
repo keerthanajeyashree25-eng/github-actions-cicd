@@ -1,5 +1,7 @@
 # Automated CI/CD Pipeline with GitHub Actions
 
+Automated CI/CD pipeline using GitHub Actions, Python, Flask, pytest, and Docker.
+
 A beginner-friendly Flask project that runs linting and unit tests on every
 push to `main` and pull request targeting `main`. After both checks pass,
 GitHub Actions builds a Docker image. Pushes to `main` also publish that image
